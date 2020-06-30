@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PlacesService } from '../places.service';
 import { Place } from '../place.model';
+import { ActivatedRoute } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-discover',
@@ -11,7 +13,9 @@ export class DiscoverPage implements OnInit {
 
   loadedPlaces: Place[];
 
-  constructor(private placesService: PlacesService) {
+  constructor(
+    private placesService: PlacesService, 
+    ) {
     console.log("constructor discoverPage")
    }
 
