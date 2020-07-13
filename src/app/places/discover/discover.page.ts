@@ -12,6 +12,7 @@ import { NavController, MenuController } from '@ionic/angular';
 export class DiscoverPage implements OnInit {
 
   loadedPlaces: Place[];
+  listLoadedPlaces: Place[];
 
   constructor(
     private placesService: PlacesService, 
@@ -22,6 +23,7 @@ export class DiscoverPage implements OnInit {
 
   ngOnInit() {
     this.loadedPlaces = this.placesService.places;
+    this.listLoadedPlaces = this.loadedPlaces.slice(1);
   }
 
   /* onOpenMenu() {
