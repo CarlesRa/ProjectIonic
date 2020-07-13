@@ -6,7 +6,7 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 })
 export class AuthService {
 
-  private _userIsAuthenticated = true;
+  private _userIsAuthenticated = false;
 
   get userIsAuthenticated() {
     return this._userIsAuthenticated;
